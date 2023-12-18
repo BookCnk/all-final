@@ -41,8 +41,10 @@ public class OfficeCreateServlet extends HttpServlet {
         office.setCountry(country);
         office.setPostalCode(postalCode);
         office.setTerritory(territory);
+
         // เพิ่มข้อมูล Office ลงในฐานข้อมูล
         officeRepository.insert(office);
+
         // ตั้งค่าข้อความเมื่อ success และส่งผู้ใช้กลับไปยังหน้า JSP ที่ใช้สำหรับการเพิ่มข้อมูล Office
         request.setAttribute("successMessage", "Add office successfully");
         request.getRequestDispatcher("/office-add.jsp").forward(request, response);

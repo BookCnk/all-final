@@ -111,7 +111,7 @@
           <a class="btn btn-outline-info" href="${pageContext.request.contextPath}/OfficeListServlet?officeCode=${office.officeCode}">View Details </a>
           <a class="btn btn-outline-warning" href="${pageContext.request.contextPath}/OfficeUpdateServlet?officeCode=${office.officeCode}"> Update</a>
           <a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/OfficeDelServlet?officeCode=${office.officeCode}" onclick="return confirm('Are you sure you want to delete this office?')"> Delete </a>
-        </td>
+        </td>${pageContext.request.contextPath}
       </tr>
     </c:forEach>
   </c:if>
